@@ -5,20 +5,51 @@
 
     <title>CSV COMPARE</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+
 
   </head>
   <body>
-    <h1>Welcome to CSV Comparator!</h1>
-    <h2>This is an application, where you can compare 2 .csv file's contents</h2>
+    <div class="container">
+        <h1 class="center">Welcome to CSV Comparator!</h1>
+        <h2 class="center">This is an application, where you can compare 2 .csv file's contents</h2>
+      <div>
+        <ul class="lik">
+          <p>Rules of usage:</p>
+          <li>Comparing only has sense, if you compare 2 identical files, with the same header!</li>
+          <li>Both files should have the same hader (doesn't have to be ordered)!</li>
+          <li>Both files should use the same separator!</li>
+          <li>Enjoy!</li>
+        </ul>
+      </div>
+    </div>
 
-    <p>Rules of usage:</p>
-<li>Comparing only has sense, if you compare 2 identical files, with the same header!</li>
-<li>Both files should have the same hader (doesn't have to be ordered)!</li>
-<li>Both files should use the same separator!</li>
-<li>Enjoy!</li>
+    <label class="btn btn-default btn-file">
+        Browse <input type="file" id="files" name="files[]" multiple />
+    </label>
 
-<h4>Please put here the csv separator and then upload your .csv files.</h4>
+    <div class="list" id="list">
+
+    </div>
+
+    <!-- <div class="result-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th ng-repeat="header in headers">{{header}}</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="fileContent in fileContents">
+          <tr ng-repeat="content in fileContent">
+            <td ng-repeat="header in headers">{{content[header]}}</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
